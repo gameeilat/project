@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HERE: added full height & no scrolling for body */
+html, body {
+  height: 100%; /* HERE */
+  overflow: hidden; /* HERE */
+}
+
+body {
+  display: flex;            /* HERE */
+  flex-direction: column;   /* HERE */
+  font-family: system-ui, sans-serif;
+  background: #1A1B20;
+  color: rgb(213, 213, 213);
+}
+
+/* HEADER */
+header {
+  padding: 6px;
+  width: 100%; /* HERE: changed from 98vw */
+  background: #222328;
+  border-bottom: 1px solid #404041;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* PAGE LAYOUT */
+.conart {
+  flex: 1;       /* HERE: makes layout fill remaining height */
+  display: flex;
+  height: 100%;  /* HERE: ensures proper flex height */
+  overflow: hidden; /* HERE: prevents global scroll overflow */
+}
+
+/* SIDEBAR */
+#sidebar {
+  width: 250px;
+  padding: 5px;
+  background-color: #222328;
+  border-right: 1px solid #404041;
+  overflow-y: auto; /* HERE: sidebar scrolls internally if needed */
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
+#sidebar a {
+  display: block;
+  padding: 10px 25px;
+  margin: 4px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #d0d0d0;
+}
+
+#sidebar a:hover {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  margin-left: 5px;
+}
+
+/* DROPDOWN */
+#sidebar .sub-menu {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: 300ms ease-in-out;
+}
+
+#sidebar .sub-menu > div {
+  overflow: hidden;
+}
+
+#sidebar .sub-menu.show {
+  grid-template-rows: 1fr;
+}
+
+/* MAIN AREA */
+main {
+  flex: 1; /* HERE: fills remaining space beside sidebar */
+  overflow: auto; /* HERE: only main scrolls if needed */
+}
+
+/* HERO */
+.hero {
+  width: calc(100% - 10px * 2);    /* HERE: no more calc() */
+  height: calc(100% - 10px * 2);   /* HERE: fill full available space */
+  margin: 10px;      /* (already yours but required for fit) */
+  
+  display: flex;
+  flex-direction: column; /* HERE: ensures proper stacking */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  border: 1px solid #404041;
+  border-radius: 10px;
+  background-color: #34383C;
+}
+
+.hero h1 {
+  font-size: 55px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 200;
+  color: #c7c7c7;
+  margin-bottom: 20px;
+}
