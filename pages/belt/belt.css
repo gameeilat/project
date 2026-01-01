@@ -1,0 +1,118 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+
+body{
+  font-family: system-ui, sans-serif;
+  background: #1A1B20;
+  color: rgb(213, 213, 213);
+  direction: rtl;
+}
+
+/* HEADER (logo left, icon right) */
+header{
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #222328;
+  border-bottom: 1px solid #404041;
+
+  direction: ltr; /* important */
+}
+
+header a.logo-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo-icon{ font-size: 24px; }
+
+/* toggle button on right */
+.view-toggle{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(213,213,213,0.92);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 140ms ease;
+  white-space: nowrap;
+}
+
+.view-toggle:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.view-toggle .icon{ font-size: 18px; line-height: 1; }
+
+/* PAGE LAYOUT */
+.page{
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 14px 30px;
+}
+
+.card{
+  background: #2A2D31;
+  border: 1px solid #404041;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.card h1{
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p, .card li{
+  color: rgba(213,213,213,0.88);
+  line-height: 1.8;
+}
+
+/* formula blocks */
+.formula{
+  background: #1E2024;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  color: rgba(213,213,213,0.95);
+  overflow-x: auto;
+}
+
+/* images */
+.image-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.image-grid img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+@media (max-width: 820px){
+  .image-grid{ grid-template-columns: 1fr; }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ממסרת רצועה — הסברים</title>
+  <link rel="stylesheet" href="belt.css" />
+</head>
+
+<body>
+  <header>
+    <a class="logo-link" href="../front.html">
+      <div class="logo">
+        <span class="logo-icon">⚙</span>
+        <span class="logo-text">MechExplain</span>
+      </div>
+    </a>
+
+    <!-- right icon -->
+    <a class="view-toggle" href="belt_model.html" title="מעבר למודל 3D">
+      <span class="icon">🧊</span>
+      <span>Model</span>
+    </a>
+  </header>
+
+  <div class="page">
+
+    <section class="card">
+      <h1>ממסרת רצועה</h1>
+      <p>
+        בממסרת רצועה מעבירים תנועה והספק בין שני גלגלים באמצעות רצועה.
+        בחירת רצועה מתבססת על ממדי הרצועה ועל הכוחות/מאמצים המתפתחים בה בזמן עבודה. :contentReference[oaicite:1]{index=1}
+      </p>
+      <p>
+        סוגים נפוצים: <b>רצועה שטוחה</b> (חתך מלבני) ו־<b>רצועה טרפזית</b> (חתך טריז), כאשר לרצועה טרפזית לרוב חיכוך “אפקטיבי” גבוה יותר. :contentReference[oaicite:2]{index=2}
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>הסבר כללי</h2>
+      <ul style="padding-right: 18px;">
+        <li><b>d</b> – קוטר גלגל קטן, <b>D</b> – קוטר גלגל גדול, <b>A</b> – מרחק בין מרכזים.</li>
+        <li><b>α₁</b> – זווית חביקה על גלגל קטן, <b>α₂</b> – זווית חביקה על גלגל גדול.</li>
+        <li><b>S₁</b> – מתיחה בענף הפעיל, <b>S₂</b> – מתיחה בענף הסביל.</li>
+        <li><b>Fₜ</b> – כוח היקפי (המעביר מומנט), <b>Q₀</b> – מתיחה התחלתית.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>נוסחאות</h2>
+
+      <p><b>קשר גיאומטרי (זוויות חביקה ואורך):</b></p>
+      <div class="formula">
+β = asin((D - d) / (2A))  (במעלות)  \n
+α₁ = 180° - 2β  \n
+α₂ = 180° + 2β  \n
+המרה לרדיאנים:  α[rad] = (π · α[deg]) / 180
+      </div>
+
+      <div class="formula">
+L ≈ (π/2)(d + D) + 2A + ((D - d)^2)/(4A)
+      </div>
+
+      <p style="margin-top:10px;"><b>מהירות, מומנט והספק:</b></p>
+      <div class="formula">
+v = (π · d · n) / 60000   [m/s]  \n
+Mₜ = (Fₜ · d) / 2        [N·mm]  \n
+P = (Fₜ · v) / 1000      [kW]
+      </div>
+
+      <p style="margin-top:10px;"><b>יחסי מתיחויות (מודל חיכוך):</b></p>
+      <div class="formula">
+רצועה שטוחה:   S₁ / S₂ = e^(μ · α₁)   (α₁ ברדיאנים)
+      </div>
+
+      <div class="formula">
+רצועה טרפזית (טריז):  μ' = μ / sin(γ/2)   ואז משתמשים ב־μ' במקום μ
+(אם משתמשים בזווית טריז טיפוסית ~40° לפי הדף המצורף)
+      </div>
+
+      <p style="margin-top:10px;"><b>כוחות/מאמצים ברצועה:</b></p>
+      <div class="formula">
+מאמץ צנטריפוגלי:  σc = (v^2 · ρ) / 10^6  ≈ (v^2 · γ) / 10^7  \n
+מאמץ כפיפה:       σb = E · (h / d)  \n
+מאמץ מתיחה (שטוחה): σt = S₁ / (b · h)
+      </div>
+
+      <p style="margin-top:10px; color: rgba(213,213,213,0.78);">
+        הערה: בדף המצורף מופיעים גם קשרי תכן למציאת מספר רצועות/רוחב רצועה לפי מאמץ מותר. :contentReference[oaicite:3]{index=3}
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>תמונות</h2>
+      <p style="margin-bottom:10px;">
+        שים את התמונות בתיקייה לדוגמה: <code>images/belts/</code> ואז עדכן את ה־src.
+      </p>
+
+      <div class="image-grid">
+        <img src="../images/belts/belt_1.png" alt="ממסרת רצועה - תרשים" />
+        <img src="../images/belts/belt_2.png" alt="כוחות ברצועה - תרשים" />
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
