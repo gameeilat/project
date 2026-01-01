@@ -65,11 +65,7 @@ header {
   color: #d0d0d0;
 }
 
-#sidebar a:hover {
-  background: rgba(255,255,255,0.12);
-  color: white;
-  margin-left: 5px;
-}
+
 
 /* DROPDOWN */
 #sidebar .sub-menu {
@@ -120,4 +116,132 @@ main {
   font-weight: 200;
   color: #c7c7c7;
   margin-bottom: 20px;
+}
+/* ============ SIDEBAR – VISUAL UPGRADE (ADD AT END) ============ */
+
+/* Sidebar container */
+#sidebar{
+  padding: 12px;
+  background: linear-gradient(180deg, #222328 0%, #1E1F24 100%);
+}
+
+/* Optional: a small title at the top (works even without adding HTML) */
+#sidebar::before{
+  content: "Navigation";
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(213,213,213,0.65);
+  padding: 8px 10px 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* List spacing */
+#sidebar ul{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Links + buttons share the same look */
+#sidebar a,
+#sidebar .dropdown-btn{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: rgba(213,213,213,0.92);
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+
+  transition: transform 140ms ease, background 140ms ease, border-color 140ms ease;
+}
+
+/* Remove default button styles */
+#sidebar .dropdown-btn{
+  cursor: pointer;
+  font: inherit;
+  outline: none;
+  text-align: left;
+}
+
+/* Hover */
+#sidebar a:hover,
+#sidebar .dropdown-btn:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
+  transform: translateX(3px);
+}
+
+/* Active / focus for keyboard */
+#sidebar a:focus-visible,
+#sidebar .dropdown-btn:focus-visible{
+  box-shadow: 0 0 0 3px rgba(120, 160, 255, 0.25);
+}
+
+/* Icon inside dropdown button */
+#sidebar .dropdown-btn svg{
+  fill: rgba(213,213,213,0.75) !important;
+  transition: transform 180ms ease;
+}
+
+/* Submenu container */
+#sidebar .sub-menu{
+  margin-top: 6px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Submenu inner */
+#sidebar .sub-menu > div{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 0 2px;
+}
+
+/* Submenu links – slightly lighter */
+#sidebar .sub-menu a{
+  background: rgba(255,255,255,0.02);
+  border-color: rgba(255,255,255,0.05);
+  padding: 9px 12px;
+  font-size: 14px;
+}
+
+/* Rotate arrow when submenu is open
+   (requires: the .show is on .sub-menu, which you already do)
+*/
+#sidebar .sub-menu.show{
+  /* keep your grid opening, this just adds visual extras */
+}
+
+/* If you can add a class on the button later, we can rotate based on it.
+   For now, rotate the arrow when the submenu is open using :has (modern browsers) */
+#sidebar li:has(.sub-menu.show) > .dropdown-btn svg{
+  transform: rotate(180deg);
+}
+
+/* Scrollbar nicer (optional, works in Chromium) */
+#sidebar::-webkit-scrollbar{
+  width: 10px;
+}
+#sidebar::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.10);
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0);
+  background-clip: padding-box;
+}
+#sidebar::-webkit-scrollbar-thumb:hover{
+  background: rgba(255,255,255,0.16);
+  border: 2px solid rgba(0,0,0,0);
+  background-clip: padding-box;
 }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>גלגלי שיניים — הסברים</title>
+  <link rel="stylesheet" href="gear.css" />
+</head>
+
+<body>
+  <header>
+    <a class="logo-link" href="../front.html">
+      <div class="logo">
+        <span class="logo-icon">⚙</span>
+        <span class="logo-text">MechExplain</span>
+      </div>
+    </a>
+
+    <!-- Right-most icon (switch view) -->
+    <a class="view-toggle" href="gear_model.html" title="מעבר למודל 3D">
+      <span class="icon">🧊</span>
+      <span>Model</span>
+    </a>
+  </header>
+
+  <div class="page">
+
+    <!-- General explanation -->
+    <section class="card" id="general">
+      <h2>הסבר כללי</h2>
+      <p>
+        גלגל שיניים הוא גלגל עם "שיניים" מסביבו. כששני גלגלי שיניים נוגעים אחד בשני —
+        השיניים נתפסות זו בזו וכך גלגל אחד מסובב את השני.
+      </p>
+      <p>
+        בדרך כלל, כששני גלגלים משתלבים ישירות — כיוון הסיבוב מתהפך:
+        אם הראשון מסתובב ימינה, השני יסתובב שמאלה. אם יש גלגל ביניים (idler),
+        הכיוון יכול להתהפך שוב.
+      </p>
+    </section>
+
+    <!-- Formulas -->
+    <section class="card" id="formulas">
+      <h2>נוסחאות</h2>
+      <p>
+        יחס העברה בגלגלי שיניים (בהנחה שאין החלקה) תלוי במספר השיניים:
+      </p>
+
+      <div class="formula">
+        i = \frac{Z_2}{Z_1}
+      </div>
+
+      <p style="margin-top:10px;">
+        קשר בין מהירות זוויתית (או סל״ד) ליחס ההעברה:
+      </p>
+
+      <div class="formula">
+        \omega_2 = \omega_1 \cdot \frac{Z_1}{Z_2}
+      </div>
+
+      <p style="margin-top:10px;">
+        וקשר מומנט (באידאל, בלי הפסדים):
+      </p>
+
+      <div class="formula">
+        T_2 = T_1 \cdot \frac{Z_2}{Z_1}
+      </div>
+
+      <p style="margin-top:10px; color: rgba(213,213,213,0.75);">
+        הערה: בפועל יש הפסדים, לכן המומנט יהיה מעט נמוך יותר.
+      </p>
+    </section>
+
+    <!-- Images -->
+    <section class="card" id="images">
+      <h2>תמונות</h2>
+      <div class="image-grid">
+        <img src="../images/גלגל שיניים/Screenshot 2025-12-10 185419.png" alt="Gear image 1">
+        <img src="../images/גלגל שיניים/Screenshot 2025-12-10 185424.png" alt="Gear image 2">
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
