@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>גלגל שיניים ישר | MechExplain</title>
+
+  <link rel="stylesheet" href="spur.css">
+</head>
+
+<body>
+
+<header>
+  <!-- לוגו (שמאל ויזואלית) -->
+  <a href="../../../front.html" class="logo-link">
+    <div class="logo">
+      <span class="logo-icon">⚙</span>
+      <span class="logo-text">MechExplain</span>
+    </div>
+  </a>
+
+  <!-- כפתור מעבר תצוגה -->
+  <button class="view-toggle" onclick="toggleView()">
+    <span class="icon">🧊</span>
+    <span id="toggleText">מודל תלת־ממד</span>
+  </button>
+</header>
+
+<div class="page">
+
+  <!-- ===== תצוגת הסבר ===== -->
+  <section id="explainView">
+
+    <div class="card">
+      <h2>גלגל שיניים ישר (Spur Gear)</h2>
+      <p>
+        גלגל שיניים ישר הוא הסוג הפשוט והנפוץ ביותר של גלגלי שיניים.
+        השיניים ישרות ומקבילות לציר הסיבוב, והוא משמש להעברת תנועה
+        ומומנט בין צירים מקבילים.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>מאפיינים עיקריים</h2>
+      <p>
+        • שיניים ישרות ומקבילות לציר<br>
+        • יעילות מכנית גבוהה<br>
+        • ייצור פשוט ועלות נמוכה<br>
+        • רמת רעש גבוהה במהירויות סיבוב גבוהות
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>נוסחאות חשובות</h2>
+
+      <p><strong>יחס תמסורת</strong></p>
+      <div class="formula">i = Z₂ / Z₁</div>
+
+      <p><strong>קשר מהירויות זוויתיות</strong></p>
+      <div class="formula">ω₂ = ω₁ / i</div>
+
+      <p><strong>קשר מומנטים</strong></p>
+      <div class="formula">T₂ = T₁ × i × η</div>
+    </div>
+
+    <div class="card">
+      <h2>יישומים נפוצים</h2>
+      <p>
+        • תיבות הילוכים<br>
+        • מערכות תעשייתיות<br>
+        • מדפסות תלת־ממד<br>
+        • מסועים
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>הערות תכן</h2>
+      <p>
+        • יש להתחשב ב-Backlash במערכות מדויקות<br>
+        • שימון נכון מפחית שחיקה ורעש<br>
+        • בחירת חומר משפיעה על אורך חיי הרכיב
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== תצוגת מודל ===== -->
+  <section id="modelView" style="display:none">
+
+    <div class="card">
+      <h2>מודל תלת־ממד</h2>
+      <p>
+        כאן יוצג מודל תלת־ממד של גלגל שיניים ישר.
+      </p>
+
+      <!-- Placeholder -->
+      <div class="formula">
+        3D MODEL PLACEHOLDER
+      </div>
+
+      <!-- בעתיד:
+      <iframe src="LINK" width="100%" height="500"></iframe>
+      -->
+    </div>
+
+  </section>
+
+</div>
+
+<script src="spur.js"></script>
+</body>
+</html>

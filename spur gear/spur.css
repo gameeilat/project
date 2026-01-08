@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #1A1B20;
+  color: rgb(213, 213, 213);
+  direction: rtl;
+}
+
+/* HEADER */
+header {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  background: #222328;
+  border-bottom: 1px solid #404041;
+  direction: ltr;
+  justify-content: space-between;
+}
+
+header a.logo-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo-icon { font-size: 24px; }
+
+/* TOGGLE */
+.view-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: rgba(213,213,213,0.92);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: 140ms ease;
+}
+
+.view-toggle:hover{
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.14);
+}
+
+.view-toggle .icon{
+  font-size: 18px;
+}
+
+/* PAGE */
+.page {
+  max-width: 1100px;
+  margin: 18px auto;
+  padding: 0 14px 30px;
+}
+
+/* CARDS */
+.card {
+  background: #2A2D31;
+  border: 1px solid #404041;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.card h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p{
+  color: rgba(213,213,213,0.85);
+  line-height: 1.75;
+}
+
+/* FORMULA */
+.formula {
+  background: #1E2024;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-top: 10px;
+  font-family: ui-monospace, monospace;
+  overflow-x: auto;
+  direction: ltr;
+}
