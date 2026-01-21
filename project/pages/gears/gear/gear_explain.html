@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>גלגלי שיניים — הסברים</title>
+    <link rel="stylesheet" href="../../../front.css">
+  <link rel="stylesheet" href="gear.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a class="logo-link" href="../../../front.html">
+      <div class="logo">
+        <span class="logo-icon">⚙</span>
+        <span class="logo-text">MechExplain</span>
+      </div>
+    </a>
+
+    <!-- switch to model view -->
+    <a class="view-toggle" href="gear_model.html" title="מעבר למודל 3D">
+      <span class="icon">🧊</span>
+      <span>Model</span>
+    </a>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="conart">
+
+    <!-- SIDEBAR (navigation) -->
+  <nav id="sidebar">
+<ul >
+  <li>
+        <button class="dropdown-btn" onclick=toggleSubMenu(this)>
+            <span>גלגלי שיניים</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360 280-560h400L480-360Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+            <div>
+<li >
+    <a href="../../../pages/gears/gear/gear_explain.html">גלגל שיניים גלילי ישר</a>
+</li>
+<li>
+    <a href="../../../pages/gears/beval gear/gear_explain.html">גלגלי שיניים קונים</a>
+</li>
+<li>
+    <a href="yes">folder</a>
+</li>
+</div>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="../../../pages/rod/rod_explain.html">גלים</a>
+    </li>
+    <li>
+        <a href="../../../pages/belt/belt_explain.html">רצועות</a>
+    </li>
+    
+    <li>
+        <a href="second">tab two</a>
+    </li>
+</ul>
+
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="page">
+
+        <!-- ===== YOUR EXISTING CONTENT ===== -->
+
+        <section class="card" id="general">
+          <h2>הסבר כללי</h2>
+          <p>
+           מה זה Spur Gear?
+
+Spur gear (בעברית: גלגל שיניים ישר) הוא אחד מסוגי גלגלי השיניים הכי נפוצים בעולם המכני. זה גלגל שיניים שבו השיניים ישרות ומקבילות לציר הסיבוב. כלומר, אם תסתכל על הגלגל מהצד, תראה שהשיניים “עולות” ישר למעלה ולא באלכסון.
+
+גלגל שיניים כזה עובד יחד עם גלגל נוסף: השיניים של שני הגלגלים נכנסות אחת בתוך השנייה, וכך סיבוב של גלגל אחד גורם לגלגל השני להסתובב.
+
+למה משתמשים בגלגלי שיניים בכלל?
+
+המטרה העיקרית של מערכת גלגלי שיניים היא להעביר תנועה סיבובית וכוח ממקום אחד לאחר, תוך שליטה על:
+
+מהירות סיבוב (RPM / ω)
+
+מומנט (Torque, T)
+
+כיוון הסיבוב
+
+כיוון העברת הכוח (בין צירים שונים אם מדובר בסוגים אחרים)
+
+דיוק והחזרתיות (תנועה בלי החלקה, בניגוד לרצועה)
+
+ב-Spur gears הצירים של שני הגלגלים חייבים להיות מקבילים, והם עובדים מצוין בתמסורות פשוטות.
+
+איך Spur Gear עובד בפועל?
+
+כששני גלגלי שיניים ישרים משתלבים, בכל רגע רק חלק מהשן במגע עם השן שמולה. המגע מתחיל בנקודה אחת, מתפתח לאורך הקו, ואז מסתיים — וכל זה חוזר כל הזמן.
+
+בגלל שהשיניים ישרות, הכוח שעובר ביניהם הוא כמעט כולו כוח משיקי (Tangential force) שגורם לסיבוב. בנוסף יש גם כוח רדיאלי (Radial force) שדוחף את הגלגלים אחד מהשני.
+
+⚠️ בגלגלי שיניים ישרים אין כמעט כוח צירי (Axial) כי השיניים לא אלכסוניות — וזה יתרון, כי לא צריך להתמודד עם דחיפה לאורך הציר כמו בגלגלי שיניים הליקליים (Helical).
+          </p>
+        </section>
+
+        
+
+        <section class="card" id="images">
+  <h2>תמונות והמחשות</h2>
+  <div class="carousel-wrapper">
+
+    <!-- left arrow -->
+    <button class="carousel-btn left" onclick="scrollCarousel(1)">▶</button>
+
+    <!-- images -->
+    <div class="carousel" id="gearCarousel">
+      
+      <img src="img/Screenshot 2025-12-10 185419.png" onclick="openImageModal(this)" >
+      <img src="img/Screenshot 2025-12-10 185424.png" onclick="openImageModal(this)">
+      <img src="img/center-distance.jpg" onclick="openImageModal(this)">
+      <img src="img/compound-spur-gear-gear-train.jpg" onclick="openImageModal(this)">
+      <img src="img/download.jpg" onclick="openImageModal(this)">
+    </div>
+
+    <!-- right arrow -->
+    <button class="carousel-btn right" onclick="scrollCarousel(-1)">◀</button>
+
+  </div>
+</section>
+
+<section class="card" id="formulas">
+          <h2>נוסחאות</h2>
+
+          <div class="pdf-container">
+  <iframe
+    src="img/formula.pdf"
+    width="100%"
+    height="600"
+    style="border:none; border-radius:12px;"
+  ></iframe>
+</div>
+
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- SIDEBAR SCRIPT -->
+  <script src="../../../front.js"></script>
+
+  
+
+
+  <!-- IMAGE MODAL -->
+<div id="imageModal" class="image-modal" onclick="closeImageModal()">
+  <span class="close-modal">×</span>
+  <img id="modalImage" />
+</div>
+
+</body>
+
+
+</html>

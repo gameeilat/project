@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>גלגלי שיניים — הסברים</title>
-    <link rel="stylesheet" href="../../front.css">
+    <link rel="stylesheet" href="../../../front.css">
   <link rel="stylesheet" href="gear.css" />
 </head>
 
@@ -12,7 +12,7 @@
 
   <!-- HEADER -->
   <header>
-    <a class="logo-link" href="../../front.html">
+    <a class="logo-link" href="../../../front.html">
       <div class="logo">
         <span class="logo-icon">⚙</span>
         <span class="logo-text">MechExplain</span>
@@ -32,7 +32,7 @@
     <!-- SIDEBAR (navigation) -->
    <nav id="sidebar">
 <ul >
-    <li>
+  <li>
         <button class="dropdown-btn" onclick=toggleSubMenu(this)>
             <span>גלגלי שיניים</span>
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M480-360 280-560h400L480-360Z"/></svg>
@@ -40,10 +40,10 @@
         <ul class="sub-menu">
             <div>
 <li >
-    <a href="../../pages/gear/gear_explain.html">גלגל שיניים גלילי ישר</a>
+    <a href="../../../pages/gears/gear/gear_explain.html">גלגל שיניים גלילי ישר</a>
 </li>
 <li>
-    <a href="yes">folder</a>
+    <a href="../../../pages/gears/beval gear/gear_explain.html">גלגלי שיניים קונים</a>
 </li>
 <li>
     <a href="yes">folder</a>
@@ -51,11 +51,12 @@
 </div>
         </ul>
     </li>
+    
     <li>
-        <a href="pages/rod/rod_explain.html">גלים</a>
+        <a href="../../../pages/rod/rod_explain.html">גלים</a>
     </li>
     <li>
-        <a href="pages/belt/belt_explain.html">רצועות</a>
+        <a href="../../../pages/belt/belt_explain.html">רצועות</a>
     </li>
     
     <li>
@@ -120,7 +121,8 @@ Spur gear (בעברית: גלגל שיניים ישר) הוא אחד מסוגי 
 
     <!-- images -->
     <div class="carousel" id="gearCarousel">
-      <img src="img/Screenshot 2025-12-10 185419.png" onclick="openImageModal(this)">
+      
+      <img src="img/Screenshot 2025-12-10 185419.png" onclick="openImageModal(this)" >
       <img src="img/Screenshot 2025-12-10 185424.png" onclick="openImageModal(this)">
       <img src="img/center-distance.jpg" onclick="openImageModal(this)">
       <img src="img/compound-spur-gear-gear-train.jpg" onclick="openImageModal(this)">
@@ -136,17 +138,15 @@ Spur gear (בעברית: גלגל שיניים ישר) הוא אחד מסוגי 
 <section class="card" id="formulas">
           <h2>נוסחאות</h2>
 
-          <div class="formula">
-            i = Z₂ / Z₁
-          </div>
+          <div class="pdf-container">
+  <iframe
+    src="img/formula.pdf"
+    width="100%"
+    height="600"
+    style="border:none; border-radius:12px;"
+  ></iframe>
+</div>
 
-          <div class="formula" style="margin-top:10px;">
-            ω₂ = ω₁ · (Z₁ / Z₂)
-          </div>
-
-          <div class="formula" style="margin-top:10px;">
-            T₂ = T₁ · (Z₂ / Z₁)
-          </div>
         </section>
 
       </div>
@@ -155,7 +155,7 @@ Spur gear (בעברית: גלגל שיניים ישר) הוא אחד מסוגי 
   </div>
 
   <!-- SIDEBAR SCRIPT -->
-  <script src="../../front.js"></script>
+  <script src="../../../front.js"></script>
 
   
 
