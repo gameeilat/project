@@ -41,6 +41,8 @@ header {
   display: flex;
   height: 100%;  /* HERE: ensures proper flex height */
   overflow: hidden; /* HERE: prevents global scroll overflow */
+  flex-direction: row;
+  direction: ltr;
 }
 
 /* SIDEBAR */
@@ -244,4 +246,7 @@ main {
   background: rgba(255,255,255,0.16);
   border: 2px solid rgba(0,0,0,0);
   background-clip: padding-box;
+}
+main, #sidebar {
+  direction: rtl;
 }

@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>גלגלי שיניים — הסברים</title>
+    <link rel="stylesheet" href="../../front.css">
   <link rel="stylesheet" href="gear.css" />
 </head>
 
 <body>
+
+  <!-- HEADER -->
   <header>
     <a class="logo-link" href="../../front.html">
       <div class="logo">
@@ -16,70 +19,109 @@
       </div>
     </a>
 
-    <!-- Right-most icon (switch view) -->
+    <!-- switch to model view -->
     <a class="view-toggle" href="gear_model.html" title="מעבר למודל 3D">
       <span class="icon">🧊</span>
       <span>Model</span>
     </a>
   </header>
 
-  <div class="page">
+  <!-- LAYOUT -->
+  <div class="conart">
 
-    <!-- General explanation -->
-    <section class="card" id="general">
-      <h2>הסבר כללי</h2>
-      <p>
-        גלגל שיניים הוא גלגל עם "שיניים" מסביבו. כששני גלגלי שיניים נוגעים אחד בשני —
-        השיניים נתפסות זו בזו וכך גלגל אחד מסובב את השני.
-      </p>
-      <p>
-        בדרך כלל, כששני גלגלים משתלבים ישירות — כיוון הסיבוב מתהפך:
-        אם הראשון מסתובב ימינה, השני יסתובב שמאלה. אם יש גלגל ביניים (idler),
-        הכיוון יכול להתהפך שוב.
-      </p>
-    </section>
+    <!-- SIDEBAR (navigation) -->
+    <nav id="sidebar">
 
-    <!-- Formulas -->
-    <section class="card" id="formulas">
-      <h2>נוסחאות</h2>
-      <p>
-        יחס העברה בגלגלי שיניים (בהנחה שאין החלקה) תלוי במספר השיניים:
-      </p>
+  <div class="sidebar-title">Navigation</div>
 
-      <div class="formula">
-        i = \frac{Z_2}{Z_1}
+  <ul>
+    <li>
+      <a href="../gear/gear_explain.html">גלגלי שיניים</a>
+    </li>
+
+    <li>
+      <a href="../rod/rod_explain.html">גלים</a>
+    </li>
+
+    <li>
+      <a href="../belt/belt_explain.html">רצועות</a>
+    </li>
+
+    <li>
+      <button class="dropdown-btn" onclick="toggleSubMenu(this)">
+        <span>create</span>
+        <svg xmlns="http://www.w3.org/2000/svg"
+             height="24px"
+             viewBox="0 -960 960 960"
+             width="24px">
+          <path d="M480-360 280-560h400L480-360Z"/>
+        </svg>
+      </button>
+
+      <ul class="sub-menu">
+        <div>
+          <li><a href="#">folder</a></li>
+          <li><a href="#">folder</a></li>
+          <li><a href="#">folder</a></li>
+        </div>
+      </ul>
+    </li>
+
+    <li>
+      <a href="#">tab two</a>
+    </li>
+  </ul>
+</nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="page">
+
+        <!-- ===== YOUR EXISTING CONTENT ===== -->
+
+        <section class="card" id="general">
+          <h2>הסבר כללי</h2>
+          <p>
+            גלגל שיניים הוא גלגל עם שיניים סביבו. כאשר שני גלגלי שיניים משתלבים,
+            התנועה מועברת ביניהם בצורה מדויקת וללא החלקה.
+          </p>
+        </section>
+
+        <section class="card" id="formulas">
+          <h2>נוסחאות</h2>
+
+          <div class="formula">
+            i = Z₂ / Z₁
+          </div>
+
+          <div class="formula" style="margin-top:10px;">
+            ω₂ = ω₁ · (Z₁ / Z₂)
+          </div>
+
+          <div class="formula" style="margin-top:10px;">
+            T₂ = T₁ · (Z₂ / Z₁)
+          </div>
+        </section>
+
+        <section class="card" id="images">
+          <h2>תמונות</h2>
+          <div class="image-grid">
+            <img src="img/Screenshot 2025-12-10 185419.png" alt="Gear image 1">
+            <img src="img/Screenshot 2025-12-10 185424.png" alt="Gear image 2">
+          </div>
+        </section>
+
       </div>
-
-      <p style="margin-top:10px;">
-        קשר בין מהירות זוויתית (או סל״ד) ליחס ההעברה:
-      </p>
-
-      <div class="formula">
-        \omega_2 = \omega_1 \cdot \frac{Z_1}{Z_2}
-      </div>
-
-      <p style="margin-top:10px;">
-        וקשר מומנט (באידאל, בלי הפסדים):
-      </p>
-
-      <div class="formula">
-        T_2 = T_1 \cdot \frac{Z_2}{Z_1}
-      </div>
-
-      <p style="margin-top:10px; color: rgba(213,213,213,0.75);">
-        הערה: בפועל יש הפסדים, לכן המומנט יהיה מעט נמוך יותר.
-      </p>
-    </section>
-
-    <!-- Images -->
-    <section class="card" id="images">
-      <h2>תמונות</h2>
-      <div class="image-grid">
-        <img src="img/Screenshot 2025-12-10 185419.png" alt="Gear image 1">
-        <img src="img/Screenshot 2025-12-10 185424.png" alt="Gear image 2">
-      </div>
-    </section>
+    </main>
 
   </div>
+
+  <!-- SIDEBAR SCRIPT -->
+  <script src="../../front.js"></script>
+
 </body>
+
+<script src="../../front.js"></script>
+
 </html>
