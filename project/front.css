@@ -6,8 +6,11 @@
 
 /* HERE: added full height & no scrolling for body */
 html, body {
-  height: 100%; /* HERE */
-  overflow: hidden; /* HERE */
+ html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
 }
 
 body {
@@ -39,7 +42,7 @@ header {
 .conart {
   flex: 1;       /* HERE: makes layout fill remaining height */
   display: flex;
-  height: 100%;  /* HERE: ensures proper flex height */
+  min-height: calc(100vh - 64px); /* header height */
   overflow: hidden; /* HERE: prevents global scroll overflow */
   flex-direction: row;
   direction: ltr;
