@@ -16,10 +16,14 @@ function scrollCarousel(direction) {
 
 // open images
 function openImageModal(img) {
+  // box
   const modal = document.getElementById("imageModal");
+  // img tag
   const modalImg = document.getElementById("modalImage");
 
+  //img tag is like pressed img
   modalImg.src = img.src;
+  // shows box
   modal.classList.add("show");
 }
 

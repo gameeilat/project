@@ -73,7 +73,7 @@ header a.logo-link{
 
 /* CARD SECTIONS */
 .card {
-  background: #2A2D31;
+  background: #2a2d31;
   border: 1px solid #404041;
   border-radius: 14px;
   padding: 18px;
@@ -179,7 +179,7 @@ model-viewer{
 }
 
 /* If you use the AR button slot */
-#ar-button{
+/* #ar-button{
   position: absolute;
   left: 50%;
   bottom: 16px;
@@ -188,7 +188,7 @@ model-viewer{
   padding: 8px 12px;
   border-radius: 10px;
 
-  background: rgba(255,255,255,0.04);  /* same vibe as .view-toggle */
+  background: rgba(255,255,255,0.04);  
   border: 1px solid rgba(255,255,255,0.08);
   color: rgba(213,213,213,0.92);
 
@@ -207,7 +207,6 @@ model-viewer{
   box-shadow: 0 0 0 3px rgba(120,160,255,0.25);
 }
 
-/* AR prompt (optional) */
 model-viewer > #ar-prompt{
   position: absolute;
   left: 50%;
@@ -226,7 +225,7 @@ model-viewer > #ar-prompt > img{
   width: 64px;
   height: 64px;
   
-}
+} */
 
 /* ===== IMAGE CAROUSEL ===== */
 
@@ -293,6 +292,7 @@ model-viewer > #ar-prompt > img{
 }
 
 /* ===== RESPONSIVE ===== */
+/* לבדוק */
 @media (max-width: 768px) {
   .carousel img {
     height: 150px;
