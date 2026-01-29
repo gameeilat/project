@@ -245,3 +245,52 @@ main {
 main, #sidebar {
   direction: rtl;
 }
+
+/* Mobile menu button + overlay (desktop stays unchanged) */
+#mobileMenuBtn { display: none; }
+#sidebarOverlay { display: none; }
+
+@media (max-width: 768px) {
+  /* header layout only on mobile */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #mobileMenuBtn {
+    display: inline-flex;
+    font-size: 26px;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* sidebar becomes off-canvas on mobile */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    transform: translateX(-110%);
+    transition: transform 0.25s ease;
+  }
+
+  body.sidebar-open #sidebar {
+    transform: translateX(0);
+  }
+
+  /* dim background when sidebar is open */
+  #sidebarOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 900;
+  }
+
+  body.sidebar-open #sidebarOverlay {
+    display: block;
+  }
+}

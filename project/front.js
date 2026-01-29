@@ -30,3 +30,49 @@ function openImageModal(img) {
 function closeImageModal() {
   document.getElementById("imageModal").classList.remove("show");
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("mobileMenuBtn");
+  const overlay = document.getElementById("sidebarOverlay");
+  const sidebar = document.getElementById("sidebar");
+
+  if (!btn || !overlay || !sidebar) return;
+
+  const setOpen = (open) => {
+    document.body.classList.toggle("sidebar-open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  };
+
+  btn.addEventListener("click", () => {
+    setOpen(!document.body.classList.contains("sidebar-open"));
+  });
+
+  overlay.addEventListener("click", () => setOpen(false));
+});
+
+// Mobile swipe support for carousel
+(function () {
+  const carousel = document.getElementById("gearCarousel");
+  if (!carousel) return;
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  carousel.addEventListener("touchstart", (e) => {
+    isDown = true;
+    startX = e.touches[0].pageX;
+    scrollLeft = carousel.scrollLeft;
+  }, { passive: true });
+
+  carousel.addEventListener("touchmove", (e) => {
+    if (!isDown) return;
+    const x = e.touches[0].pageX;
+    const walk = startX - x;
+    carousel.scrollLeft = scrollLeft + walk;
+  }, { passive: true });
+
+  carousel.addEventListener("touchend", () => {
+    isDown = false;
+  });
+})();
