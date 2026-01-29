@@ -137,10 +137,9 @@ model-viewer{
   
 
   /* match your theme */
-  background: #1E2024; /* same as .formula */
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 12px;
-
+  border: 1px solid rgba(255,255,255,0.10); 
+background:rgb(52, 56, 60);
+   border-radius:12px;
   overflow: hidden;
 }
 
