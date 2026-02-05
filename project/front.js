@@ -31,7 +31,7 @@ function closeImageModal() {
   document.getElementById("imageModal").classList.remove("show");
 }
 
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("sidebar-loaded", () => {
   const btn = document.getElementById("mobileMenuBtn");
   const overlay = document.getElementById("sidebarOverlay");
   const sidebar = document.getElementById("sidebar");
@@ -49,6 +49,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   overlay.addEventListener("click", () => setOpen(false));
 });
+
 
 // Mobile swipe support for carousel
 (function () {
