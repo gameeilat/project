@@ -4,7 +4,7 @@ button.nextElementSibling.classList.toggle("show")
 
 }
 
-// slide images
+// slide images, 1 right
 function scrollCarousel(direction) {
   const carousel = document.getElementById("gearCarousel");
   const scrollAmount = 300;
