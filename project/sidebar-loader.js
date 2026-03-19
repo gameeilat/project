@@ -1,22 +1,43 @@
-document.addEventListener("DOMContentLoaded", () => { //waits for the page to load before running the code
+document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("sidebar-container");
-  if (!container) return; //doesn't run if there is no container, safty check
+  if (!container) return;
 
   // find project root automatically
-  const depth = location.pathname.split("/").length - 2; //tales the amounts of returns and subtracts 2
-  const prefix = depth > 0 ? "../".repeat(depth - 1) : ""; //returns it back to the root file
+  const depth = location.pathname.split("/").length - 2;
+  const prefix = depth > 0 ? "../".repeat(depth - 1) : "";
 
   fetch(prefix + "sidebar.html")
     .then(res => {
-      if (!res.ok) throw new Error("Sidebar not found");
-      return res.text();//safty check
+      if (!res.ok) throw new Error("Sidebar not found"); //response
+      return res.text();
     })
     .then(html => {
       container.innerHTML = html;
-      document.dispatchEvent(new Event("sidebar-loaded")); //sidebar is loaded run front.js code
+
+      // fix sidebar links relative to current page depth
+      const links = container.querySelectorAll("a[href]");
+      links.forEach(link => {
+        const href = link.getAttribute("href");
+
+        // skip anchors, absolute links, mailto, tel, js
+        if (
+          !href ||
+          href.startsWith("#") ||
+          href.startsWith("http") ||
+          href.startsWith("/") ||
+          href.startsWith("mailto:") ||
+          href.startsWith("tel:") ||
+          href.startsWith("javascript:")
+        ) {
+          return;
+        }
+
+        link.setAttribute("href", prefix + href);
+      });
+
+      document.dispatchEvent(new Event("sidebar-loaded"));
     })
     .catch(err => {
       console.error("Sidebar load failed:", err);
     });
-}
- );
+});
