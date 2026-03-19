@@ -41,7 +41,7 @@ document.addEventListener("sidebar-loaded", () => {
 
   const setOpen = (open) => {
     document.body.classList.toggle("sidebar-open", open);
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    btn.setAttribute("aria-expanded", open ? "true" : "false"); //ignore
   }; //if sidebar should be opened it sets aria expanded to true if it isn't it sets it to false
 
   btn.addEventListener("click", () => {
