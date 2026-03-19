@@ -32,11 +32,12 @@ function closeImageModal() {
 }
 
 document.addEventListener("sidebar-loaded", () => {
-  const btn = document.getElementById("mobileMenuBtn");
-  const overlay = document.getElementById("sidebarOverlay");
-  const sidebar = document.getElementById("sidebar");
 
-  if (!btn || !overlay || !sidebar) return;
+  const btn = document.getElementById("mobileMenuBtn"); //mobile button
+  const overlay = document.getElementById("sidebarOverlay"); //dark background 
+  const sidebar = document.getElementById("sidebar"); //the sidebar 
+
+  if (!btn || !overlay || !sidebar) return; //safty check
 
   const setOpen = (open) => {
     document.body.classList.toggle("sidebar-open", open);
