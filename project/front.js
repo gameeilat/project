@@ -63,7 +63,7 @@ document.addEventListener("sidebar-loaded", () => {
 
   carousel.addEventListener("touchstart", (e) => {
     isDown = true;
-    startX = e.touches[0].pageX; //current x finger position
+    startX = e.touches[0].pageX; //current x finger position - event, fingers, first finger, only x
     scrollLeft = carousel.scrollLeft;
   }, { passive: true }); // removes delay
 
@@ -72,7 +72,7 @@ document.addEventListener("sidebar-loaded", () => {
     const x = e.touches[0].pageX;
     const walk = startX - x;
     carousel.scrollLeft = scrollLeft + walk;
-  }, { passive: true });
+  }, { passive: true }); //math stuff
 
   carousel.addEventListener("touchend", () => {
     isDown = false;
