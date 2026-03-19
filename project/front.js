@@ -55,11 +55,11 @@ document.addEventListener("sidebar-loaded", () => {
 // Mobile swipe support for carousel
 (function () {
   const carousel = document.getElementById("gearCarousel");
-  if (!carousel) return;
+  if (!carousel) return; //safty check
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  let isDown = false; //finger touching
+  let startX; //starting x position
+  let scrollLeft; 
 
   carousel.addEventListener("touchstart", (e) => {
     isDown = true;
