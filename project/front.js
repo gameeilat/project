@@ -63,9 +63,9 @@ document.addEventListener("sidebar-loaded", () => {
 
   carousel.addEventListener("touchstart", (e) => {
     isDown = true;
-    startX = e.touches[0].pageX;
+    startX = e.touches[0].pageX; //current x finger position
     scrollLeft = carousel.scrollLeft;
-  }, { passive: true });
+  }, { passive: true }); // removes delay
 
   carousel.addEventListener("touchmove", (e) => {
     if (!isDown) return;
