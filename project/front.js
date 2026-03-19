@@ -49,7 +49,7 @@ document.addEventListener("sidebar-loaded", () => {
   }); //when the menu button is clicked it toggles the sidebar
 
   overlay.addEventListener("click", () => setOpen(false));
-});
+}); //closes when the overlay is clicked
 
 
 // Mobile swipe support for carousel
