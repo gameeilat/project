@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { //waits for the page to load before running the code
   const container = document.getElementById("sidebar-container");
-  if (!container) return;
+  if (!container) return; //doesn't run if there is no container, safty check
 
   // find project root automatically
   const depth = location.pathname.split("/").length - 2;
@@ -18,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch(err => {
       console.error("Sidebar load failed:", err);
     });
-});
+}
+ );
