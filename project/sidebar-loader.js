@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => { //waits for the page to lo
     })
     .then(html => {
       container.innerHTML = html;
-      document.dispatchEvent(new Event("sidebar-loaded"));
+      document.dispatchEvent(new Event("sidebar-loaded")); //sidebar is loaded run front.js code
     })
     .catch(err => {
       console.error("Sidebar load failed:", err);
