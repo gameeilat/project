@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => { //waits for the page to lo
   fetch(prefix + "sidebar.html")
     .then(res => {
       if (!res.ok) throw new Error("Sidebar not found");
-      return res.text();
+      return res.text();//safty check
     })
     .then(html => {
       container.innerHTML = html;
