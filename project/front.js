@@ -76,5 +76,5 @@ document.addEventListener("sidebar-loaded", () => {
 
   carousel.addEventListener("touchend", () => {
     isDown = false;
-  });
+  }); //stops the function
 })();
